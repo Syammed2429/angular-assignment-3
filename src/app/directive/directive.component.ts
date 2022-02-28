@@ -12,7 +12,7 @@ export class DirectiveComponent {
 
   buttonToggle() {
     this.buttonStatus = !this.buttonStatus;
-    this.buttonUpdatedLog.push(this.buttonUpdatedLog.length + 1);
+    this.buttonUpdatedLog.push(new Date());
   }
   updateParagraph() {
     this.buttonStatus = true;
