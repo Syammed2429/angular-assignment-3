@@ -1,4 +1,13 @@
 <div class="container">
-    <button class="btn btn-success rounded-pill">Display Details</button>
-<p class="my-2">Secret Password = <code class="fw-bold">'Tuna'</code></p>
+    <button (click)="buttonToggle()" class="btn btn-success rounded-pill">Display Details</button>
+<p class="my-2" *ngIf="buttonStatus" >Secret Password = tuna</p>
+<p ngFor="let e of passage"></p>
+<div
+*ngFor="let item of buttonUpdatedLog"
+[ngStyle]="{background:item>=5 ? 'blue' :'white'}"
+[ngClass]="{'white-text': item>=5}"
+>
+{{item}}
+
+</div>
 </div>
